@@ -33,7 +33,7 @@ display_height = 600
 
 display = pygame.display.set_mode((display_width, display_height))
 
-pygame.display.set_caption("Snake")
+pygame.display.set_caption("Snake! Score: 0")
 
 clock = pygame.time.Clock()
 
@@ -76,6 +76,7 @@ def gameLoop():
                         gameOver = False
 
                     elif event.key == pygame.K_SPACE:
+                        pygame.display.set_caption("Snake! Score: 0")
                         gameLoop()
 
                 elif event.type == pygame.QUIT:
@@ -141,6 +142,7 @@ def gameLoop():
             snake_speed += 5
             snakeLength += 10
             score += 1
+            pygame.display.set_caption("Snake! Score: {}".format(score))
 
         # Lose EDGES
         if lead_x > 790 or lead_x < 0 or lead_y > 590 or lead_y < 0:
