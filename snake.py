@@ -1,3 +1,7 @@
+#   A basic snake game using Pygame
+#   Made by: Zeo
+#   v 1.0
+
 import pygame
 import random
 
